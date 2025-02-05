@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Interviews | Liberation War Archive</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+<style>
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #003366;
+  }
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-body {
+    text-align: center;
+  }
+  .card-title {
+    font-size: 1.25rem;
+  }
+  .card-text {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .bio-details {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+  .modal-header {
+    background-color: #003366;
+    color: white;
+  }
+  .modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  .audio-player {
+    width: 100%;
+    height: 60px;
+  }
+</style>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_nav">
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +0880 123456789
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : liberation_archive@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                Liberation War Archive
+              </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="interviews.html"> Interviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="document.html">Documents</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="photographs.html">Photographs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container my-5">
+      <h2 class="section-title">Recorded Interviews of Liberation War Heroes</h2>
+  
+      <!-- Row for Interview Cards -->
+      <div class="row" id="interview-catalog">
+        <!-- Interview Cards will be dynamically added here using JavaScript -->
+      </div>
+    </div>
+  
+    <!-- Modal for Interview Details -->
+    <div class="modal fade" id="interviewModal" tabindex="-1" role="dialog" aria-labelledby="interviewModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="interviewModalLabel">Interview Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="interview-detail-content"></div>
+            <div class="audio-player-container">
+              <audio controls class="audio-player" id="interview-audio">
+                <source src="" id="audio-source" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <h4>
+        Contact Us
+      </h4>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="info_items">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      Send Documents to Contribute
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      +880 123456789
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      liberation_archive@gmail.com
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="social-box">
+      <h4>
+        Follow Us
+      </h4>
+      <div class="box">
+        <a href="">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="#">Shanto</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+  <script>
+    const interviews = [
+      {
+        id: 1,
+        name: "Sheikh Mujibur Rahman",
+        role: "Leader of Bangladesh Liberation War",
+        imageUrl: "https://idsb.tmgrup.com.tr/ly/uploads/images/2021/03/16/100479.jpg",
+        summary: "A speech on the beginning of the Liberation War in 1971. Sheikh Mujibur Rahman describes the struggles and vision for an independent Bangladesh.",
+        biography: "Born in 1920 in Tungipara, he was a pivotal figure in the Bangladesh Liberation War, becoming the founding leader of the country.",
+        audioUrl: "https://cutt.ly/Be48usSl",
+        detailedTestimony: "In this testimony, Mujibur Rahman recalls the decisive moments leading to the declaration of independence of Bangladesh and the challenges he faced in the political landscape during the war."
+      },
+      {
+        id: 2,
+        name: "Jahanara Imam",
+        role: "Writer and Activist",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Jahanara_Imam_1993.jpg",
+        summary: "Jahanara Imam talks about her experiences as a young girl during the war and how it shaped her views on independence and human rights.",
+        biography: "Jahanara Imam is a Bangladeshi author, known for her controversial writings on social issues. She became a prominent voice in Bangladesh during and after the Liberation War.",
+        audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+        detailedTestimony: "In this testimony, Taslima shares the emotional impact of the war on her childhood and how it influenced her later works and activism."
+      },
+      {
+        id: 3,
+        name: "Abdul Ghaffar Choudhury",
+        role: "Poet and Freedom Fighter",
+        imageUrl: "https://www.tbsnews.net/sites/default/files/styles/big_2/public/images/2022/05/19/085152untitled-1.jpg",
+        summary: "Abdul Ghaffar Choudhury shares his journey as a freedom fighter and poet, discussing his role in the war and his passion for Bangladesh's independence.",
+        biography: "Abdul Ghaffar Choudhury is a poet and freedom fighter who actively participated in the Liberation War, contributing his literary works to inspire the masses.",
+        audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+        detailedTestimony: "Abdul Ghaffar Choudhury talks about his poems that inspired the freedom fighters and the people of Bangladesh during the dark days of the war."
+      }
+    ];
+
+    // Function to render interview cards
+    function renderInterviews() {
+      const catalog = document.getElementById('interview-catalog');
+      interviews.forEach(interview => {
+        const card = document.createElement('div');
+        card.classList.add('col-md-4', 'mb-4');
+        card.innerHTML = `
+          <div class="card">
+            <img src="${interview.imageUrl}" class="card-img-top" alt="${interview.name}">
+            <div class="card-body">
+              <h5 class="card-title">${interview.name}</h5>
+              <p class="card-text">${interview.summary}</p>
+              <button class="btn btn-primary" onclick="viewInterviewDetails(${interview.id})">View Details</button>
+            </div>
+          </div>
+        `;
+        catalog.appendChild(card);
+      });
+    }
+
+    // Function to show interview details in a modal
+    function viewInterviewDetails(interviewId) {
+      const interview = interviews.find(i => i.id === interviewId);
+      const modalContent = document.getElementById('interview-detail-content');
+      modalContent.innerHTML = `
+        <h4>${interview.name}</h4>
+        <p><strong>Role:</strong> ${interview.role}</p>
+        <p><strong>Biography:</strong> ${interview.biography}</p>
+        <p><strong>Detailed Testimony:</strong> ${interview.detailedTestimony}</p>
+      `;
+      document.getElementById('audio-source').src = interview.audioUrl;
+      $('#interviewModal').modal('show');
+    }
+
+    // Initialize the interview catalog
+    window.onload = renderInterviews;
+  </script>
+
+</body>
+
+</html>

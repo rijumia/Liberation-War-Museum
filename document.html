@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Documents | Liberation War Archive</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #003366;
+    }
+    .card {
+      margin-bottom: 30px;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      text-align: center;
+    }
+    .document-details {
+      margin-top: 20px;
+    }
+    .document-detail-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .document-description {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      color: #666;
+    }
+    .modal-header {
+      background-color: #003366;
+      color: white;
+    }
+    .modal-body {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_nav">
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +0880 123456789
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : liberation_archive@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                Liberation War Archive
+              </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="interviews.html"> Interviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="document.html">Documents</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="photographs.html">Photographs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- document section -->
+
+  <div class="container my-5">
+    <h2 class="section-title">Catalog of Historical Documents</h2>
+
+    <!-- Row for Document Cards -->
+    <div class="row" id="document-catalog">
+      <!-- Document Cards will be dynamically added here using JavaScript -->
+    </div>
+  </div>
+
+  <!-- Modal for Document Details -->
+  <div class="modal fade" id="documentModal" tabindex="-1" role="dialog" aria-labelledby="documentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="documentModalLabel">Document Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="document-detail-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Categorization of Documents -->
+    <h2 class="section-title">Categorization of Documents</h2>
+    <div class="row my-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/doc-1.jpg" class="card-img-top" alt="Document Type">
+          <div class="card-body">
+            <h5 class="card-title">By Document Type</h5>
+            <p class="card-text">Browse documents categorized by type, such as treaties, letters, and official records.</p>
+            <a href="#" class="btn btn-secondary">View by Type</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/doc-2.jpg" class="card-img-top" alt="Document Date">
+          <div class="card-body">
+            <h5 class="card-title">By Date</h5>
+            <p class="card-text">Find documents based on the date of publication or relevance during different phases of the Liberation War.</p>
+            <a href="#" class="btn btn-secondary">View by Date</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/doc-3.jpg" class="card-img-top" alt="Document Relevance">
+          <div class="card-body">
+            <h5 class="card-title">By Relevance</h5>
+            <p class="card-text">View documents categorized by their relevance and impact on the Liberation War.</p>
+            <a href="#" class="btn btn-secondary">View by Relevance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed View for a Document -->
+    <h2 class="section-title">Detailed View of Documents</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-info text-white">
+            <h5>Detailed View: Historical Document</h5>
+          </div>
+          <div class="card-body">
+            <div class="document-details">
+              <div class="document-detail-title">Treaty of Peace and Independence (1971)</div>
+              <div class="document-description">
+                <p>
+                  This is the official treaty that marked the end of the Bangladesh Liberation War and established Bangladesh as an independent nation. Signed between Bangladesh and Pakistan, it set the terms for peace and sovereignty.
+                </p>
+              </div>
+              <div>
+                <strong>Publication Date:</strong> December 16, 1971
+              </div>
+              <div>
+                <strong>Source:</strong> National Archives of Bangladesh
+              </div>
+              <a href="#" class="btn btn-success mt-3">Download Document</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-info text-white">
+            <h5>Detailed View: Historical Document</h5>
+          </div>
+          <div class="card-body">
+            <div class="document-details">
+              <div class="document-detail-title">Operation Jackpot (1971)</div>
+              <div class="document-description">
+                <p>
+                  This is the official treaty that marked the end of the Bangladesh Liberation War and established Bangladesh as an independent nation. Signed between Bangladesh and Pakistan, it set the terms for peace and sovereignty.
+                </p>
+              </div>
+              <div>
+                <strong>Publication Date:</strong> December 16, 1971
+              </div>
+              <div>
+                <strong>Source:</strong> National Archives of Bangladesh
+              </div>
+              <a href="#" class="btn btn-success mt-3">Download Document</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- end document section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <h4>
+        Contact Us
+      </h4>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="info_items">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      Send Documents to Contribute
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      +880 123456789
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      liberation_archive@gmail.com
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="social-box">
+      <h4>
+        Follow Us
+      </h4>
+      <div class="box">
+        <a href="">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="#">Shanto</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+  <script>
+    const documents = [
+      {
+        id: 1,
+        title: "Treaty of Peace and Independence (1971)",
+        description: "A historic treaty marking the end of the Bangladesh Liberation War, establishing Bangladesh as an independent country.",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjYhIcmAAOKn8tfNeWFcwVI_jb8FPUqCaLCg&s",
+        publicationDate: "December 16, 1971",
+        source: "National Archives of Bangladesh",
+        content: "Full treaty text and official declaration details. Signed between Bangladesh and Pakistan to end the war and grant independence."
+      },
+      {
+        id: 2,
+        title: "Bangladesh Declaration of Independence (1971)",
+        description: "The formal declaration of Bangladesh's independence by Sheikh Mujibur Rahman, leading to the Liberation War.",
+        imageUrl: "https://mir-s3-cdn-cf.behance.net/projects/404/79cb63108901585.Y3JvcCw4MDgsNjMyLDAsMA.jpg",
+        publicationDate: "March 25, 1971",
+        source: "National Archives of Bangladesh",
+        content: "The declaration made by Sheikh Mujibur Rahman, proclaiming the independence of Bangladesh from Pakistan."
+      },
+      {
+        id: 3,
+        title: "Official Correspondence Between India and Bangladesh (1971)",
+        description: "Key correspondence between Indian and Bangladeshi authorities during the Liberation War.",
+        imageUrl: "https://www.towerhamlets.gov.uk/images_and_video/Bangladesh-at-50/The-Liberation-War-has-ended.x1e8baf18.jpg?width=10%&height=10%&fit=crop",
+        publicationDate: "November 1971",
+        source: "Ministry of Foreign Affairs, Bangladesh",
+        content: "Important communications exchanged between Indian and Bangladeshi diplomats outlining strategies during the war."
+      }
+    ];
+
+    // Function to render document cards
+    function renderDocuments() {
+      const catalog = document.getElementById('document-catalog');
+      documents.forEach(doc => {
+        const card = document.createElement('div');
+        card.classList.add('col-md-4', 'mb-4');
+        card.innerHTML = `
+          <div class="card">
+            <img src="${doc.imageUrl}" class="card-img-top" alt="${doc.title}">
+            <div class="card-body">
+              <h5 class="card-title">${doc.title}</h5>
+              <p class="document-description">${doc.description}</p>
+              <button class="btn btn-primary" onclick="viewDocumentDetails(${doc.id})">View Details</button>
+            </div>
+          </div>
+        `;
+        catalog.appendChild(card);
+      });
+    }
+
+    // Function to show document details in a modal
+    function viewDocumentDetails(docId) {
+      const doc = documents.find(d => d.id === docId);
+      const modalContent = document.getElementById('document-detail-content');
+      modalContent.innerHTML = `
+        <h4>${doc.title}</h4>
+        <p><strong>Published on:</strong> ${doc.publicationDate}</p>
+        <p><strong>Source:</strong> ${doc.source}</p>
+        <p><strong>Description:</strong> ${doc.content}</p>
+      `;
+      $('#documentModal').modal('show');
+    }
+
+    // Initialize the document catalog
+    window.onload = renderDocuments;
+  </script>
+
+
+</body>
+
+</html>

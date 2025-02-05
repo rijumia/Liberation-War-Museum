@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Gallery | Liberation War Archive</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #003366;
+    }
+    .gallery-item {
+      position: relative;
+    }
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.1);
+    }
+    .category-button {
+      margin: 5px;
+    }
+    .modal-header {
+      background-color: #003366;
+      color: white;
+    }
+    .modal-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+    }
+    .modal-body img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_nav">
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +0880 123456789
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : liberation_archive@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                Liberation War Archive
+              </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="interviews.html"> Interviews</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="document.html">Documents</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="photographs.html">Photographs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                  </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  <!-- service section -->
+
+  <div class="container my-5">
+    <h2 class="section-title">Photographs from the Liberation War of Bangladesh</h2>
+
+    <!-- Filter Buttons -->
+    <div class="text-center">
+      <button class="btn btn-primary category-button" onclick="filterGallery('event')">Event</button>
+      <button class="btn btn-primary category-button" onclick="filterGallery('location')">Location</button>
+      <button class="btn btn-primary category-button" onclick="filterGallery('theme')">Theme</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="row my-4" id="photo-gallery">
+      <!-- Gallery items will be dynamically added here using JavaScript -->
+    </div>
+  </div>
+
+  <!-- Modal for Viewing Image -->
+  <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="photoModalLabel">Photo Detail</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img id="modal-photo" src="" alt="Enlarged Photo">
+        </div>
+        <div class="modal-footer">
+          <a id="download-link" href="#" class="btn btn-success">Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end service section -->
+
+
+
+<!-- info section -->
+<section class="info_section ">
+    <div class="container">
+      <h4>
+        Contact Us
+      </h4>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="info_items">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      Send Documents to Contribute
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      +880 123456789
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="">
+                  <div class="item ">
+                    <div class="img-box">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      liberation_archive@gmail.com
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="social-box">
+      <h4>
+        Follow Us
+      </h4>
+      <div class="box">
+        <a href="">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="#">Shanto</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+  <script>
+    // Sample photo data
+    const photos = [
+      {
+        id: 1,
+        src: "https://ecdn.dhakatribune.net/contents/cache/images/640x359x1/uploads/media/2023/12/09/liberation-war-museum-photo-archive-1-c43ff82ddb4273a6f0849b90f31601d0.jpg?jadewits_media_id=10773",
+        alt: "Battlefield Moment",
+        category: "event",
+        download: "https://ecdn.dhakatribune.net/contents/cache/images/640x359x1/uploads/media/2023/12/09/liberation-war-museum-photo-archive-1-c43ff82ddb4273a6f0849b90f31601d0.jpg?jadewits_media_id=10773",
+      },
+      {
+        id: 2,
+        src: "https://assets.telegraphindia.com/telegraph/26290ce6-0aba-4ef9-993d-b9b358a8293d.jpg",
+        alt: "Liberation Day Celebration",
+        category: "event",
+        download: "https://assets.telegraphindia.com/telegraph/26290ce6-0aba-4ef9-993d-b9b358a8293d.jpg",
+      },
+      {
+        id: 3,
+        src: "https://lh3.googleusercontent.com/proxy/WlFbC3n9srFKPuHbUCGPjWmny0dlfDq0qWdlwfwunb7Vk21qhCECWVzcfExlYgKuL5nYwBfLhGVztMa4cg3kA1Wx47Rv_M4wJHPiii8EqQZJo8ZSujtrfS3-XciX0bk",
+        alt: "Bangladesh Flag at War Zone",
+        category: "location",
+        download: "https://lh3.googleusercontent.com/proxy/WlFbC3n9srFKPuHbUCGPjWmny0dlfDq0qWdlwfwunb7Vk21qhCECWVzcfExlYgKuL5nYwBfLhGVztMa4cg3kA1Wx47Rv_M4wJHPiii8EqQZJo8ZSujtrfS3-XciX0bk",
+      },
+      {
+        id: 4,
+        src: "https://ecdn.ittefaqbd.com/contents/cache/images/800x450x1/uploads/media/2022/03/19/c723813fb26612776a69b608c91261ee-62359aebb6b25.jpg?jadewits_media_id=2048",
+        alt: "Refugees in Liberation War",
+        category: "theme",
+        download: "https://ecdn.ittefaqbd.com/contents/cache/images/800x450x1/uploads/media/2022/03/19/c723813fb26612776a69b608c91261ee-62359aebb6b25.jpg?jadewits_media_id=2048",
+      },
+      {
+        id: 5,
+        src: "https://www.tbsnews.net/sites/default/files/styles/big_2/public/images/2021/06/07/courtesy-of-anwar-hossain-foundation-copy-1584848590737.jpg",
+        alt: "Freedom Fighters in Action",
+        category: "theme",
+        download: "https://www.tbsnews.net/sites/default/files/styles/big_2/public/images/2021/06/07/courtesy-of-anwar-hossain-foundation-copy-1584848590737.jpg",
+      }
+    ];
+
+    // Function to render photo gallery
+    function renderGallery() {
+      const gallery = document.getElementById('photo-gallery');
+      gallery.innerHTML = ''; // Clear existing gallery
+
+      photos.forEach(photo => {
+        const photoDiv = document.createElement('div');
+        photoDiv.classList.add('col-md-4', 'mb-4', 'gallery-item');
+        photoDiv.innerHTML = `
+          <img src="${photo.src}" alt="${photo.alt}" class="gallery-img" onclick="viewPhoto(${photo.id})">
+        `;
+        gallery.appendChild(photoDiv);
+      });
+    }
+
+    // Function to filter gallery based on category
+    function filterGallery(category) {
+      const filteredPhotos = photos.filter(photo => photo.category === category);
+      const gallery = document.getElementById('photo-gallery');
+      gallery.innerHTML = '';
+
+      filteredPhotos.forEach(photo => {
+        const photoDiv = document.createElement('div');
+        photoDiv.classList.add('col-md-4', 'mb-4', 'gallery-item');
+        photoDiv.innerHTML = `
+          <img src="${photo.src}" alt="${photo.alt}" class="gallery-img" onclick="viewPhoto(${photo.id})">
+        `;
+        gallery.appendChild(photoDiv);
+      });
+    }
+
+    // Function to open photo modal and display enlarged image
+    function viewPhoto(photoId) {
+      const photo = photos.find(p => p.id === photoId);
+      const modalPhoto = document.getElementById('modal-photo');
+      const downloadLink = document.getElementById('download-link');
+
+      modalPhoto.src = photo.src;
+      downloadLink.href = photo.download;
+
+      $('#photoModal').modal('show');
+    }
+    // Initialize gallery on page load
+    window.onload = renderGallery;
+  </script>
+
+</body>
+
+</html>

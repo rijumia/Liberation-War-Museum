@@ -1,0 +1,140 @@
+.tooper{
+    background-color: rgb(205, 212, 205);
+    padding: 0 10%;
+    color: rgb(0, 3, 5);
+}
+.header-section{
+    padding: 0 10%;
+    background-color: rgb(191, 240, 191);
+}
+.icon{
+    color: aliceblue;
+}
+
+.banner{
+    background-image: url('img/banner1.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 20px; 
+    color: white;
+    height: 90vh;
+}
+.banner h1:hover {
+    background-color: aquamarine;
+    margin: 0 30%;
+    border-radius: 10px;
+
+  }
+
+/* Introduction Section */
+.introduction {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.introduction h2 {
+    font-size: 2.5rem;
+    color: green;
+}
+
+.introduction p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Featured Section */
+.featured {
+    background-color: #fafafa;
+}
+
+.featured .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.featured h2 {
+    font-size: 2.5rem;
+    color: green;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover {
+    color: #007bff;
+}
+
+.footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer .container {
+    max-width: 1200px;
+}
+
+.footer .list-unstyled {
+    padding-left: 0;
+}
+
+.footer .text-center {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer .social-icons i {
+    font-size: 1.5rem;
+}
+
+.footer .social-icons a {
+    padding: 10px;
+}
+
+.footer .social-icons a:hover {
+    color: #007bff;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-img {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.gallery-item a {
+    display: block;
+    text-decoration: none;
+}
+
+.gallery-item a:hover {
+    opacity: 0.8;
+}
+
+.gallery-item p {
+    text-align: center;
+    margin-top: 10px;
+}
